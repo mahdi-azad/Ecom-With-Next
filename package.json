@@ -1,0 +1,21 @@
+{
+  "name": "ecom-with-next",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "antd": "^5.19.1",
+    "axios": "^1.7.2",
+    "bootstrap": "^5.3.3",
+    "next": "14.2.4",
+    "react": "^18",
+    "react-dom": "^18",
+    "sass": "^1.77.6",
+    "swiper": "^11.1.4"
+  }
+}
