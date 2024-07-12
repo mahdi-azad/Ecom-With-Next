@@ -14,11 +14,7 @@ const ProductInfo = dynamic(
 
 
 const SingleProduct = ({ product }) => { 
-<<<<<<< HEAD
 console.log('product', product);
-=======
-
->>>>>>> origin/main
   return (
     <>
         <HeadComp title="Product Dynamic Page" />
@@ -31,10 +27,6 @@ console.log('product', product);
                         product ? (<ProductInfo product={product} />) :
                             (<div className="col-md-9 col-sm-12 mt-5">
                                 {/* <Empty description="No Product Found"/> */}
-<<<<<<< HEAD
-                                <h1>hello</h1>
-=======
->>>>>>> origin/main
                             </div>
                         )
                     }
