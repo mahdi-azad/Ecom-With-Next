@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
+<<<<<<< HEAD
 import SliderImage from "react-zoom-slider";
+=======
+>>>>>>> origin/main
 
 const ProductInfo = ({ product }) => {
   const [images, setImages] = useState([]);
@@ -24,6 +27,7 @@ const ProductInfo = ({ product }) => {
         <div className="col-md-6 col-sm-12 product_image">
           <div className="row">
             <h1>Product Info</h1>
+<<<<<<< HEAD
             {images?.length > 0 && (
               <SliderImage
                 data={images}
@@ -32,6 +36,8 @@ const ProductInfo = ({ product }) => {
                 direction="right"
               />
             )}
+=======
+>>>>>>> origin/main
           </div>
         </div>
       </div>
