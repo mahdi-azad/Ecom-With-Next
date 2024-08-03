@@ -53,7 +53,7 @@ export default function Home({ featuredProduct}) {
 
 // export async function getServerSideProps() {
 //   try {
-//     const res = await axios.get("https://staging-be-ecom.techserve4u.com/api/product/getfeatured")
+//     const res = await axios.get("/product/getfeatured")
 //     if (res.data?.success) {
 //       const featuredProduct = res.data?.products;
 

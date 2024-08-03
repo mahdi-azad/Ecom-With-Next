@@ -4,6 +4,7 @@ import SliderImage from "react-zoom-slider";
 
 const ProductInfo = ({ product }) => {
   const [images, setImages] = useState([]);
+  const [discount, setDiscount] = useState("");
   useEffect(() => {
     if (!product) return;
 
@@ -47,6 +48,14 @@ const ProductInfo = ({ product }) => {
               <span>({product?.ratingCount || 0} reviews)</span>
             </span>
           </div>
+
+          <div className="sku">
+            <span className="key">
+              SKU: {product?.sku ? product?.sku : "N/A"}
+            </span>
+          </div>
+
+          <div className="price">{discount}</div>
         </div>
       </div>
     </div>

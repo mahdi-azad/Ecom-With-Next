@@ -1,17 +1,17 @@
-import axios from "axios";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, FreeMode, Autoplay } from "swiper/modules";
 import { Rate } from "antd";
+import axiosInstance from "@/lib/axios";
 
 const FeaturedProduct = () => {
   // the old way of fetching api CSR before using getserversideprops
   const [featuredProduct, setFeaturedProduct] = useState([]);
   useEffect(() => {
     const fetchFeaturedProduct = () => {
-      axios
-        .get("https://staging-be-ecom.techserve4u.com/api/product/getfeatured")
+      axiosInstance
+        .get("/product/getfeatured")
         .then((res) => {
           if (res.data?.success) {
             setFeaturedProduct(res.data?.products);

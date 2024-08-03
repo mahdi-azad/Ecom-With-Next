@@ -1,8 +1,9 @@
 // import ProductInfo from "@/components/product/ProductInfo";
 import HeadComp from "@/components/shared/HeadComp"
 import Header from "@/components/shared/Header/Header"
+import axiosInstance from "@/lib/axios";
 // import { Empty } from "antd";
-import axios from "axios";
+
 import dynamic from "next/dynamic";
 
 const ProductInfo = dynamic(
@@ -39,7 +40,7 @@ console.log('product', product);
 
 SingleProduct.getInitialProps = async (ctx) => {
     try {
-        const res = await axios.get(`https://staging-be-ecom.techserve4u.com/api/product/details/${ctx.query?.slug}`);
+        const res = await axiosInstance.get(`/product/details/${ctx.query?.slug}`);
 
         console.log(res);
 
