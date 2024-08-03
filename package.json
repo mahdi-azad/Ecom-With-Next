@@ -9,10 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "antd": "^5.19.1",
+    "antd": "^5.20.0",
     "axios": "^1.7.2",
     "bootstrap": "^5.3.3",
-    "next": "14.2.4",
+    "next": "^14.2.4",
     "react": "^18",
     "react-dom": "^18",
     "react-zoom-slider": "^0.1.0",
