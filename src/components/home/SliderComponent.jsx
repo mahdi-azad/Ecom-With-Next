@@ -2,13 +2,14 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, FreeMode, Autoplay } from "swiper/modules";
 import { useEffect, useState } from "react";
-import { axiosInstance } from "@/lib/axios";
+// import { axiosInstance } from "@/lib/axios";
+import axios from "axios";
 
 const SliderComponent = () => {
   const [sliders, setSliders] = useState([]);
 
   useEffect(() => {
-    axiosInstance
+    axios
       .get("/settings/getsliders")
       .then((res) => setSliders(res.data?.sliders))
       .catch((err) => console.log(err));

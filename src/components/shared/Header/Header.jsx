@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Search from "./Search";
-import dynamic from "next/dynamic"; // import UserMenu from "./UserMenu";
-
-const UserMenu = dynamic(async () => await import("./UserMenu"), {
+import dynamic from "next/dynamic";
+// import UserMenu from "./UserMenu";
+const {UserMenu} = dynamic(async () => await import("./UserMenu"), {
   ssr: false,
 });
 
