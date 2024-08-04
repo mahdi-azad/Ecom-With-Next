@@ -1,9 +1,12 @@
 import Link from "next/link";
 import Search from "./Search";
-import UserMenu from "./UserMenu";
+import dynamic from "next/dynamic"; // import UserMenu from "./UserMenu";
+
+const UserMenu = dynamic(async () => await import("./UserMenu"), {
+  ssr: false,
+});
 
 const Header = () => {
-  
   return (
     <header id="header">
       <div className="main_nav_container">
@@ -23,7 +26,7 @@ const Header = () => {
             <Search />
             <div className="header_info">
               <span></span>
-              <UserMenu></UserMenu>
+              <UserMenu />
             </div>
           </div>
         </nav>
