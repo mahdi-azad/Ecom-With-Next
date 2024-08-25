@@ -1,0 +1,10 @@
+//common imports
+@import "./common/variables.scss";
+@import "./common/default";
+
+//components
+@import "./components/header";
+@import "./components/sliderComp";
+@import "./components/basicservice";
+@import "./components/featuredProduct";
+@import "./components/product/productDetails";
