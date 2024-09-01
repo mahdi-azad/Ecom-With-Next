@@ -8,7 +8,8 @@ const UserMenu = () => {
   // useEffect(() => {
   //   const handleDocumentClick = (event) => {
   //     const isDropdown = event.target.closest(".drop");
-  //     if (!isDropdown) {
+  //     const isLoginContainer = event.target.closest(".user_login_container")
+  //     if (!isDropdown && !isLoginContainer) {
   //       setIsOpen(false);
   //     }
   //   };
@@ -17,7 +18,7 @@ const UserMenu = () => {
   //   return () => {
   //     document.removeEventListener("click", handleDocumentClick);
   //   };
-  // }, [isOpen]);
+  // }, []);
   const items = [
     {
       key: "1",
@@ -35,6 +36,7 @@ const UserMenu = () => {
       <Dropdown
         open={isOpen}
         placement="bottom"
+        className="drop"
         menu={{
           items,
         }}
