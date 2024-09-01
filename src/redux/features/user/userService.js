@@ -1,4 +1,4 @@
-const { default: axiosInstance } = require("@/lib/axios")
+import axiosInstance from "@/lib/axios";
 
 const verifyUser = async () => {
     const response = await axiosInstance.post("/user/verify")

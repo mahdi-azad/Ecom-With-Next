@@ -1,5 +1,5 @@
-const { createSlice } = require("@reduxjs/toolkit");
-const { verifyUser } = require("./userAsyncActions");
+import { createSlice } from "@reduxjs/toolkit";
+import { verifyUser } from "./userAsyncActions";
 
 const initialState = {
     userInfo: null,
