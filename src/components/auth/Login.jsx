@@ -8,6 +8,7 @@ import { Toaster, toast } from "sonner";
 import { useAppDispatch } from "@/redux/hooks";
 import { doLogin } from "@/redux/features/auth/authAsyncActions";
 import { useRouter } from "next/navigation";
+import { verifyUser } from "@/redux/features/user/userAsyncActions";
 
 const Login = () => {
   const dispatch = useAppDispatch();
@@ -35,6 +36,9 @@ const Login = () => {
             Cookies.set(process.env.NEXT_PUBLIC_ECOM_USER, token);
             toast.success("Logged In Successfully");
 
+            //load user
+            dispatch(verifyUser());
+
             setTimeout(() => {
               // window.location.href = "/"; // to navigate with reload
               router.push("/profile");
@@ -50,7 +54,7 @@ const Login = () => {
   };
   return (
     <div className="user_login_container">
-      <h3>Login</h3>
+      <h3>Login Here</h3>
       <div className="mb-3">
         <Form
           // {...layout}
