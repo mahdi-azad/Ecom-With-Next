@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import Header from "@/components/shared/Header/Header.jsx";
 import HeadComp from "@/components/shared/HeadComp";
+import ProfileInfoBar from "@/components/shared/Profile/ProfileInfoBar";
 
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
 
       <main className="main_container">
        Profile Page
+       <ProfileInfoBar></ProfileInfoBar>
       </main>
     </>
   );
