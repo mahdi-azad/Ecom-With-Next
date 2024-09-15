@@ -32,7 +32,17 @@ export default function Home({ featuredProduct}) {
           <div className="row">
 
             <div className="col-lg-3">
-              <h1>Categories</h1>
+              <h3 className="border border-dark">Electronic Devices</h3>
+              <h3 className="border border-dark">Electronic Accessories</h3>
+              <h3 className="border border-dark">TV & Home Appliances</h3>
+              <h3 className="border border-dark">Health & Beauty</h3>
+              <h3 className="border border-dark">Babies & Toys</h3>
+              <h3 className="border border-dark">Groceries & Pets</h3>
+              <h3 className="border border-dark">Home & Lifestyle</h3>
+              <h3 className="border border-dark">Women's Fashion</h3>
+              <h3 className="border border-dark">Men's Fashion</h3>
+              <h3 className="border border-dark">Watches & Accessories</h3>
+              <h3 className="border border-dark">Sports & Outdoor</h3>
             </div>
 
             <div className="col-lg-9 col-md-12">

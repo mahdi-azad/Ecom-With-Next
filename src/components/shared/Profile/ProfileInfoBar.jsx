@@ -6,12 +6,12 @@ const ProfileInfoBar = () => {
       <div className="profile_welcome">
         <h1>Welcome {}</h1>
       </div>
-      <div>
+      <div className="">
         <h3>Profile Details</h3>
-        <h4></h4>
-        <h4></h4>
-        <h4></h4>
-        <h4></h4>
+        <h4>Name:</h4>
+        <h4>Date of Birth:</h4>
+        <h4>Country:</h4>
+        <h4>Preferences:</h4>
       </div>
     </div>
   );
