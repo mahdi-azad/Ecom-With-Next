@@ -2,15 +2,18 @@
 
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import userService from "./userService";
+import { setAuthenticated } from "../auth/authSlice";
 
 export const verifyUser = createAsyncThunk(
     "user/verify", 
     async(_data, thunkAPI) => {
     try {
+        thunkAPI.dispatch(setAuthenticated(true));
         return await userService.verifyUser();
+        
     } catch (error) {
         const message = (error?.response && error?.response?.data && error?.response?.data.errors.message) || "Error occured fetching the user info"
-
-        return thunkAPI.rejectWithValue(message)
+        thunkAPI.dispatch(setAuthenticated(false));
+        return thunkAPI.rejectWithValue(message);
     }
 });

@@ -6,7 +6,7 @@ const ProfileInfoBar = () => {
       <div className="profile_welcome">
         <h1>Welcome {}</h1>
       </div>
-      <div className="">
+      <div className="border border-black">
         <h3>Profile Details</h3>
         <h4>Name:</h4>
         <h4>Date of Birth:</h4>
